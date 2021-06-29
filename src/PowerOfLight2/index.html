@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Power Of Light v0.2</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <section>
+            <h2>Light</h2>
+        </section>
+        <div class="light"></div>
+        <script type="text/javascript">
+            var pos = document.documentElement;
+              pos.addEventListener("mousemove", e => {
+              pos.style.setProperty('--x', e.clientX + "px");
+              pos.style.setProperty('--y', e.clientY + "px");
+            });
+        </script>
+    </body>
+</html>
+

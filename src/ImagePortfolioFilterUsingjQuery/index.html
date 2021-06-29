@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Product Filter</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<section>
+		<ul>
+			<li class="list active" data-filter="all">All</li>
+			<li class="list" data-filter="mobile">Mobile</li>
+			<li class="list" data-filter="camera">Camera</li>
+			<li class="list" data-filter="watch">Watch</li>
+			<li class="list" data-filter="shoe">Shoe</li>
+			<li class="list" data-filter="headphone">Headphone</li>
+		</ul>
+		<div class="product">
+			<div class="itemBox mobile"><img src="mobile1.jpg"></div>	
+			<div class="itemBox camera"><img src="camera1.jpg"></div>	
+			<div class="itemBox watch"><img src="watch1.jpg"></div>	
+			<div class="itemBox shoe"><img src="shoe1.jpg"></div>	
+			<div class="itemBox headphone"><img src="headphone1.jpg"></div>	
+			<div class="itemBox mobile"><img src="mobile2.jpg"></div>	
+			<div class="itemBox camera"><img src="camera2.jpg"></div>	
+			<div class="itemBox watch"><img src="watch2.jpg"></div>	
+			<div class="itemBox shoe"><img src="shoe2.jpg"></div>	
+			<div class="itemBox headphone"><img src="headphone2.jpg"></div>	
+			<div class="itemBox mobile"><img src="mobile3.jpg"></div>	
+			<div class="itemBox camera"><img src="camera3.jpg"></div>	
+			<div class="itemBox watch"><img src="watch3.jpg"></div>	
+			<div class="itemBox shoe"><img src="shoe3.jpg"></div>	
+			<div class="itemBox headphone"><img src="headphone3.jpg"></div>	
+			<div class="itemBox mobile"><img src="mobile4.jpg"></div>		
+			<div class="itemBox watch"><img src="watch4.jpg"></div>	
+			<div class="itemBox shoe"><img src="shoe4.jpg"></div>	
+			<div class="itemBox headphone"><img src="headphone4.jpg"></div>	
+			<div class="itemBox mobile"><img src="mobile5.jpg"></div>		
+		</div>
+	</section>
+	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+	    	$(".list").click(function(){
+	        	var value = $(this).attr('data-filter');
+		        if(value == "all"){
+		            $('.itemBox').show('1000');
+			    }
+		        else{
+		            $(".itemBox").not('.'+value).hide('1000');
+		            $('.itemBox').filter('.'+value).show('1000');
+			    }
+		    });
+
+	        // Add Active Class on selected item
+	    	$(".list").click(function(){
+	    		$(this).addClass('active').siblings().removeClass('active');
+	    	});
+		});
+	</script>
+</body>
+</html>
+
+

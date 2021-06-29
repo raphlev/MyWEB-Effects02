@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working Google Search Website Design</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<section>
+		<div class="main">
+			<img src="google.png">
+			<div class="serchBx">
+				<input type="text" name="" class="query">
+				<div class="icons">
+					<div><img src="search.png"></div>
+					<div><img src="mic.png"></div>
+				</div>
+			</div>
+			<div class="button">
+				<button class="searchBtn">Google Search</button>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		let query = document.querySelector('.query');
+		let search = document.querySelector('.searchBtn')
+		search.onclick = function(){
+			let	url='https://www.google.com/search?q='+query.value;
+	     	window.open(url,'_self');
+		}
+	</script>
+</body>
+</html>

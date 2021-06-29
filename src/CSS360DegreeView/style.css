@@ -1,0 +1,36 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.car
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.car span
+{
+  position: absolute;
+  top: 0;
+  left: calc(100% / 16 * var(--i));
+  width: calc(100% / 16);
+  height: 100%;
+}
+.car img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0;
+}
+.car img:nth-child(2),
+.car span:hover +  img
+{
+  opacity: 1;
+}

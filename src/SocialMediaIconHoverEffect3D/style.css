@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.socialMedia
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.bg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: 0.5s;
+    filter: contrast(1.5);
+}
+.sci
+{
+    position: relative;
+    display: flex;
+    /*-webkit-box-reflect:  below 1px linear-gradient(transparent,#0002);*/
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li:before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 10vw;
+    pointer-events: none;
+    font-weight: 700;
+    opacity: 0;
+    transition: 0.5s;
+}
+.sci li:hover:before
+{
+    opacity: 0.1;
+    transform: translate(-50%,calc(-50% + 200px));
+}
+.sci li a
+{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    transition: background 0.25s;
+    box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+}
+.js-tilt-glare
+{
+    border-radius: 10px;
+}
+.sci li a:hover.facebook
+{
+    background: #1877F2;
+}
+.sci li a:hover.whatsapp
+{
+    background: #25D366;
+}
+.sci li a:hover.youtube
+{
+    background: #ff0000;
+}
+.sci li a:hover.twitter
+{
+    background: #0099FF;
+}
+.sci li a:hover.instagram
+{
+    background: #E4405F;
+}
+.sci li a .fa 
+{
+    transition: 0.25s;
+    pointer-events: none;
+}
+.sci li a:hover .fa 
+{
+    transform: scale(2) translateZ(50px);
+    color: #fff;
+}

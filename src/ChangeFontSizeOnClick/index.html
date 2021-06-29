@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Change Font Size on Click | Javascript</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="buttons">
+			<span class="btn active" onclick="document.getElementById('text').style.fontSize = '1em'">A</span>
+			<span class="btn" onclick="document.getElementById('text').style.fontSize = '1.25em'">A</span>
+			<span class="btn" onclick="document.getElementById('text').style.fontSize = '1.75em'">A</span>
+		</div>
+
+		<div class="content" id="text">
+			<h2>Change Font Size</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+	<!-- Add Active Class in Selected Item -->
+	<script>
+		let buttons = document.querySelector('.buttons');
+		let btn = buttons.querySelectorAll('.btn');
+		for (var i = 0; i <btn.length; i++){
+			btn[i].addEventListener('click', function(){
+				let current = document.getElementsByClassName('active');
+				current[0].className = current[0].className.replace("active", "");
+				this.className += " active";
+			})
+		}
+	</script>
+</body>
+</html>

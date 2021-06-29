@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Bar using CSS & Javascript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="search">
+		<div class="icon"></div>
+		<div class="input">
+			<input type="text" name="" id="SearchInput" placeholder="Search">
+		</div>
+		<span class="clear" onclick="document.getElementById('SearchInput').value = ''"></span>
+	</div>
+	<script type="text/javascript">
+		const icon = document.querySelector('.icon');
+		const search = document.querySelector('.search');
+		icon.onclick = function(){
+			search.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>

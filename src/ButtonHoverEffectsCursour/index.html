@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Button Hover Effects</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <a href="#" class="btn"><span>Button</span></a>
+    <script>
+      const btn = document.querySelector('.btn');
+      btn.onmousemove = function(e){
+        const x = e.pageX - btn.offsetLeft;
+        const y = e.pageY - btn.offsetTop;
+
+        btn.style.setProperty('--x', x + 'px');
+        btn.style.setProperty('--y', y + 'px');
+      }
+    </script>
+  <body>
+</html>

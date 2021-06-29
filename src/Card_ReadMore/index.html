@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Read More or Less More using Javascript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="icon">
+				<img src="img1.png">
+			</div>
+			<div class="content">
+				<h3>Web & Mobile Development</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exgercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident.</p>
+			</div>
+			<a class="more"></a>
+		</div>
+		<div class="card">
+			<div class="icon">
+				<img src="img2.png">
+			</div>
+			<div class="content">
+				<h3>Customer Support</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exgercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+			<a class="more"></a>
+		</div>
+		<div class="card">
+			<div class="icon">
+				<img src="img3.png">
+			</div>
+			<div class="content">
+				<h3>Marketing & Commuication</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exgercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<a class="more"></a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	let more = document.querySelectorAll('.more');
+		for(let i=0;i<more.length;i++){
+		more[i].addEventListener("click",function(){
+		  more[i].parentNode.classList.toggle("active");
+		})
+	}
+	</script>
+</body>
+</html>

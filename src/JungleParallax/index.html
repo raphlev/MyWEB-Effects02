@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">Jungle</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <h2 id="text"><span>it's time for a new</span></br>Adventure</h2>
+      <img src="bird1.png" id="bird1">
+      <img src="bird2.png" id="bird2">
+      <img src="forest.png" id="forest">
+      <a href="#sec" id="btn">Explore</a>
+      <img src="rocks.png" id="rocks">
+      <img src="water.png" id="water">
+    </section>
+    <div class="sec" id="sec">
+      <h2>Parallax Scrolling Effects</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero iste laboriosam iusto sapiente voluptatum a, incidunt culpa quae. Necessitatibus vero exercitationem accusantium nemo culpa ipsa tempora quia? Aliquam, nemo doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id quidem dolore atque maiores laudantium, corporis quam quisquam vero repellat ad nobis asperiores incidunt veritatis neque eum delectus consequuntur quibusdam eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cumque molestiae fugit ratione aliquam suscipit, perspiciatis in quod molestias quisquam doloribus at tempore. Minima aperiam molestias in nobis eaque ipsam.<br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero iste laboriosam iusto sapiente voluptatum a, incidunt culpa quae. Necessitatibus vero exercitationem accusantium nemo culpa ipsa tempora quia? Aliquam, nemo doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id quidem dolore atque maiores laudantium, corporis quam quisquam vero repellat ad nobis asperiores incidunt veritatis neque eum delectus consequuntur quibusdam eaque.<br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero iste laboriosam iusto sapiente voluptatum a, incidunt culpa quae. Necessitatibus vero exercitationem accusantium nemo culpa ipsa tempora quia? Aliquam, nemo doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id quidem dolore atque maiores laudantium, corporis quam quisquam vero repellat ad nobis asperiores incidunt veritatis neque eum delectus consequuntur quibusdam eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cumque molestiae fugit ratione aliquam suscipit, perspiciatis in quod molestias quisquam doloribus at tempore. Minima aperiam molestias in nobis eaque ipsam.<br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero iste laboriosam iusto sapiente voluptatum a, incidunt culpa quae. Necessitatibus vero exercitationem accusantium nemo culpa ipsa tempora quia? Aliquam, nemo doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id quidem dolore atque maiores laudantium, corporis quam quisquam vero repellat ad nobis asperiores incidunt veritatis neque eum delectus consequuntur quibusdam eaque.<br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero iste laboriosam iusto sapiente voluptatum a, incidunt culpa quae. Necessitatibus vero exercitationem accusantium nemo culpa ipsa tempora quia? Aliquam, nemo doloribus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id quidem dolore atque maiores laudantium, corporis quam quisquam vero repellat ad nobis asperiores incidunt veritatis neque eum delectus consequuntur quibusdam eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cumque molestiae fugit ratione aliquam suscipit, perspiciatis in quod molestias quisquam doloribus at tempore. Minima aperiam molestias in nobis eaque ipsam.</p>
+    </div>
+
+    <script>
+      let forest = document.getElementById('forest');
+      let rocks = document.getElementById('rocks');
+      let water = document.getElementById('water');
+      let bird1 = document.getElementById('bird1');
+      let bird2 = document.getElementById('bird2');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let header = document.getElementById('header');
+
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        forest.style.top = value * 0.25 + 'px';
+        rocks.style.top = value * -0.12 + 'px';
+        text.style.top = 50 + value * -0.5 + '%';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+        bird1.style.top = value * -1.5 + 'px';
+        bird1.style.left = value * 2 + 'px';
+        bird2.style.top = value * -1.5 + 'px';
+        bird2.style.left = value * -5 + 'px';
+      })
+    </script>
+  </body>
+</html>

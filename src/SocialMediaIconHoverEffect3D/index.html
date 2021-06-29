@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3D Social Media Icon Hover Effects</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<section class="socialMedia">
+		<div class="bg"></div>
+		<ul class="sci">
+			<li data-color="#1877F2" data-text="Facebook"><a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li data-color="#25D366" data-text="Whatsapp"><a href="#" class="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+			<li data-color="#ff0000" data-text="Youtube"><a href="#" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+			<li data-color="#0099FF" data-text="Twitter"><a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li data-color="#E4405F" data-text="Instagram"><a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+		</ul>
+	</section>
+	<script src="vanilla-tilt.js"></script>
+	<script type="text/javascript">
+		VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+			max: 30,
+			speed: 400,
+			glare: true,
+    		"max-glare": 1,  
+		});
+
+
+		let list = document.querySelectorAll('.sci li');
+		let bg = document.querySelector('.bg');
+		list.forEach(elements => {
+			elements.addEventListener("mouseenter", function(event){
+				let color = event.target.getAttribute('data-color');
+				bg.style.backgroundColor = color;
+			})
+			elements.addEventListener("mouseleave", function(event){
+				bg.style.backgroundColor = '#fff';
+			})
+		} )
+	</script>
+</body>
+</html>

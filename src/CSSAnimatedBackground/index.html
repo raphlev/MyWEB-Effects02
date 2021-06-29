@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Animation Effect</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <section class="scene">
+      <div class="sun"></div>
+      <div class="bg">
+        <img src="police_car.gif" class="car1">
+        <img src="police_car.gif" class="car2">
+      </div>
+    </section>
+    <script>
+      const sun = document.querySelector('.sun');
+      const body = document.querySelector('body');
+      sun.onclick = function(){
+        body.classList.toggle('dark')
+      }
+    </script>
+  </body>
+</html>

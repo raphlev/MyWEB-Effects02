@@ -1,0 +1,59 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	overflow: hidden;
+	height: 100vh;
+}
+section
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	cursor: url('aim.png'), pointer;
+	background: url(bg.png);
+	background-size: cover;
+	background-position: center;
+}
+section:active
+{
+	cursor: url('aim_red.png'), pointer;
+}
+span
+{
+	position: absolute;
+	width: 40px;
+	height: 38px;
+	background: url(hole.png);	
+	transform: translate(28px,28px);
+	pointer-events: none;
+	animation: fadeOut 4s linear forwards;
+}
+
+.blood
+{
+	position: absolute;
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+	z-index: 1000;
+	background-size: cover;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+}
+@keyframes fadeOut
+{
+	0%,50%
+	{
+		opacity: 1;
+	}
+	100%
+	{
+		opacity: 0;
+	}
+}

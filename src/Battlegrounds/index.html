@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Battlegrounds | Vanilla Javascript</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<section>
+		<audio id="audio" src="sound.wav" autostart="false"></audio>
+	</section>
+	<script type="text/javascript">
+
+		 
+
+  	document.addEventListener("click", function(e){
+  		let body = document.querySelector('body');
+  		let bullet = document.createElement("span");
+  		let x = e.offsetX;
+  		let y = e.offsetY;
+  		bullet.style.left = x+'px';
+  		bullet.style.top = y+'px';
+  		body.appendChild(bullet);
+  		// setTimeout(function(){
+    //     },4000);
+        
+  		// appear blood on click
+  		let images = [
+                'url("blood1.png")',
+                'url("blood2.png")',
+                'url("blood3.png")',
+                'url("blood4.png")',
+                ];
+
+        let blood = document.createElement("span");	
+        blood.classList.add('blood');
+  		let bg = images[Math.floor(Math.random() * images.length)];
+  		blood.style.backgroundImage = bg;
+
+        blood.style.left = Math.random() * innerWidth + "px";
+        blood.style.top = Math.random() * innerHeight + "px";
+        body.appendChild(blood);
+      	setTimeout(function(){
+            blood.remove();
+            bullet.remove();
+        },4000);
+
+      	// bullet Sound on click
+    	let sound = document.getElementById("audio");
+  		sound.play();
+  	})
+	</script>
+</body>
+</html>

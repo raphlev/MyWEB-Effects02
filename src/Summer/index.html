@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Summer | Mousemove Parallax Effects</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<section class="banner">
+		<div class="container">
+			<div id="scene">
+				<h2 id="text">
+					<span data-depth-y="2">S</span>
+					<span data-depth-y="-6">u</span>
+					<span data-depth-y="5">m</span>
+					<span data-depth-y="-8">m</span>
+					<span data-depth-y="-3">e</span>
+					<span data-depth-y="6">r</span>
+				</h2>
+				<div class="layer z_index_above" data-depth="-0.5"><img src="img1.png"></div>
+				<div class="layer z_index_above" data-depth="0.75"><img src="img2.png"></div>
+				<div class="layer z_index_above" data-depth="1"><img src="img3.png"></div>
+				<div class="layer" data-depth="-0.25"><img src="img4.png"></div>
+				<div class="layer" data-depth="0.625"><img src="img5.png"></div>
+				<div class="layer" data-depth="-0.375"><img src="img6.png"></div>
+				<div class="layer z_index_above" data-depth="0.5"><img src="img7.png"></div>
+			</div>
+		</div>
+	</section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script>
+		var text = document.getElementById('text');
+		var parallaxInstance = new Parallax(text);
+		var scene = document.getElementById('scene');
+		var parallaxInstance = new Parallax(scene);
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color with Dropdown Menu</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section>
+    <div class="bg">Red</div>
+    <select onchange="changeColor(this);" class="color">
+      <option value="#ff2323">Red</option>
+      <option value="#66ff00">Green</option>
+      <option value="#9b1fe8">Purple</option>
+      <option value="#ffff12">Yellow</option>
+      <option value="#ff69b4">Pink</option>
+    </select>
+  </section>
+
+  <script>
+
+
+    // change background color
+    function changeColor(getColorText) {
+      let bg = document.querySelector('.bg');
+      let color = getColorText.value;
+      let text = getColorText.options[getColorText.selectedIndex].text;
+      bg.style.background = color;
+      bg.innerHTML = text;
+    };
+  </script>
+</body>
+</html>
