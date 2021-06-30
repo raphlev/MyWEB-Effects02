@@ -26,4 +26,7 @@ https://www.freeconvert.com/video-compressor/download
 resource files are duplicated: images/assets/..
 remove subfolders and check with F12
 
-# xx
+# Install / Start
+Parcel does not work - HMR / Hot reloading not working
+Nothing to install
+Select index.html > OPen With Live Server
