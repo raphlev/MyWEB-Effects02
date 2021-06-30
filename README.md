@@ -25,3 +25,5 @@ https://www.freeconvert.com/video-compressor/download
 # remove subFolder: 
 resource files are duplicated: images/assets/..
 remove subfolders and check with F12
+
+# xx
